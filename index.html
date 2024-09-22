@@ -128,6 +128,10 @@
           <li class="list-inline-item">
             <i class="devicon-express-original" title="ExpressJs"></i>
           </li>
+
+          <li class="list-inline-item">
+            <i class="devicon-go-original-wordmark"></i>
+          </li>
           
         </ul>
 
@@ -317,7 +321,10 @@
             }
         }
 
-      IncrementVisit()
+      if (localStorage.getItem("visited") !== 'true') {
+        IncrementVisit();
+        localStorage.setItem("visited", 'true');
+      }
       
     </script>
 
