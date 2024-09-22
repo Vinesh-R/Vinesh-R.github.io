@@ -21,6 +21,8 @@
 
     <link href="css/resume.css" rel="stylesheet">
 
+    <script>
+
   </head>
 
   <body id="page-top">
@@ -300,6 +302,27 @@
       </section>
 
     </div>
+                
+    <script>
+        async function IncrementVisit() {
+            try {
+                const response = await fetch("https://letscountapi.com/vinprotfolio/azedcdscs/increment", {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+                return response;
+            } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
+            }
+        }
+
+      IncrementVisit()
+      
+    </script>
+
 
     <script>
       const the_animation = document.querySelectorAll('.animation')
